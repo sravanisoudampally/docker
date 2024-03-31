@@ -4,8 +4,8 @@ FROM ubuntu:latest
 # Set the working directory
 WORKDIR /app
 
-# Copy files from host to container
-COPY . .
+# Copy only the requirements file to avoid copying unnecessary files
+COPY requirements.txt .
 
 # Run commands inside the container
 RUN apt-get update && \
