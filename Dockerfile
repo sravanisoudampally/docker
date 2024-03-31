@@ -5,7 +5,7 @@ FROM ubuntu:latest
 WORKDIR /app
 
 # Copy only the requirements file to avoid copying unnecessary files
-COPY requirements.txt .
+COPY . .
 
 # Run commands inside the container
 RUN apt-get update && \
